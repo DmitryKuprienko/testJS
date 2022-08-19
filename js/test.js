@@ -39,16 +39,44 @@ console.log(typeof isSidebarOpen); // "boolean"
 // console.log(message, quantity,); // JavaScript is awesome!
 // alert(message);
 
-// Просимо клієнта підтвердити бронювання готелю
-// і зберігаємо результат роботи confirm у змінну
-const isComing = confirm("Please confirm hotel reservation");
-console.log(isComing);
+// // Просимо клієнта підтвердити бронювання готелю
+// // і зберігаємо результат роботи confirm у змінну
+// const isComing = confirm("Please confirm hotel reservation");
+// console.log(isComing);
 
-// Запитуємо назву готеля, в якому хотів би зупинитися клієнт
-// і зберігаємо результат виклику prompt у змінну.
-const hotelName = prompt("Please enter desired hotel name");
-console.log(hotelName);
+// // Запитуємо назву готеля, в якому хотів би зупинитися клієнт
+// // і зберігаємо результат виклику prompt у змінну.
+// const hotelName = prompt("Please enter desired hotel name");
+// console.log(hotelName);
 
-const value = prompt("Please enter a number!");
-console.log(typeof value); // "string"
-console.log(value); // "5"
+const valuse = prompt("Please enter a number!");
+console.log(typeof valuse); // "string"
+console.log(valuse); // "5"
+const x = 10;
+const y = 5;
+
+// Додавання
+console.log(x + y); // 15
+
+// Віднімання
+console.log(x - y); // 5
+
+// Множення
+console.log(x * y); // 50
+
+// Ділення
+console.log(x / y); // 2
+
+// Остача від ділення
+console.log(x % y); // 0
+
+// Додавання із заміною (також є для всіх інших операторів)
+let value = 5;
+
+// Аналогічно запису value = value + 10;
+value += 10;
+console.log(value); // 15
+
+const valueA = 11;
+console.log(Number(valueA));
+console.log(typeof Number(valueA));
