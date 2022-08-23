@@ -213,3 +213,20 @@ function multiply(x, y, z) {
 multiply(2, 3, 5); // Результат множення дорівнює 30
 multiply(4, 8, 12); // Результат множення дорівнює 384
 multiply(17, 6, 25); // Результат множення дорівнює 2550
+
+function checkAge(age) {
+  let message;
+
+if ( checkAge >= 18) { // Change this line
+    message = 'You are an adult';
+  } else {
+    message = 'You are a minor';
+  }
+
+  return message;
+};
+
+consol.log(checkAge(20));
+consol.log(checkAge(8));
+consol.log(checkAge(14));
+consol.log(checkAge(38));
