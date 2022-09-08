@@ -469,17 +469,17 @@ passwordInputName.
 //===================================
 
 
-const book = {
-  title: "The Last Kingdom",
-  author: "Bernard Cornwell",
-  genres: ["historical prose", "adventure"],
-  public: true,
-  rating: 8.38,
-};
+// const book = {
+//   title: "The Last Kingdom",
+//   author: "Bernard Cornwell",
+//   genres: ["historical prose", "adventure"],
+//   public: true,
+//   rating: 8.38,
+// };
 
-// Деструктуризуємо
-const { title, author, public, rating, coverImage } = book;
-console.log(coverImage); // undefined
+// // Деструктуризуємо
+// const { title, author, public, rating, coverImage } = book;
+// console.log(coverImage); // undefined
 
-const accessType = public ? "публічному" : "закритому";
-const message = `Книга ${title} автора ${author} з рейтингом ${rating} знаходиться в ${accessType} доступі.`;
+// const accessType = public ? "публічному" : "закритому";
+// const message = `Книга ${title} автора ${author} з рейтингом ${rating} знаходиться в ${accessType} доступі.`;ПШЕ
