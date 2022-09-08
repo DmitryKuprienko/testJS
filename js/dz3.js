@@ -433,36 +433,53 @@ passwordInputName.
 // Виклик getAllPropValues("quantity") повертає [4, 3, 7, 9]
 // Виклик getAllPropValues("price") повертає [1300, 2700, 400, 1200]
 // Виклик getAllPropValues("category") повертає []
-const products = [
-  { name: "Radar", price: 1300, quantity: 4 },
-  { name: "Scanner", price: 2700, quantity: 3 },
-  { name: "Droid", price: 400, quantity: 7 },
-  { name: "Grip", price: 1200, quantity: 9 },
-];
+// const products = [
+//   { name: "Radar", price: 1300, quantity: 4 },
+//   { name: "Scanner", price: 2700, quantity: 3 },
+//   { name: "Droid", price: 400, quantity: 7 },
+//   { name: "Grip", price: 1200, quantity: 9 },
+// ];
 
-function getAllPropValues(propName) {
-  // Change code below this line
+// function getAllPropValues(propName) {
+//   // Change code below this line
  
-  let propertyValues = [];
+//   let propertyValues = [];
   
 
   
-  for (const product of products) {
-    // console.log(Object.keys(product));
+//   for (const product of products) {
+//     // console.log(Object.keys(product));
     
- propertyValues.push(product[propName])
-    if (propName === Object.keys(product)) {
-      propertyValues.push(product[propName]);
-   }
+//  propertyValues.push(product[propName])
+//     if (propName === Object.keys(product)) {
+//       propertyValues.push(product[propName]);
+//    }
      
-  }
-  return propertyValues;
+//   }
+//   return propertyValues;
   
 
-  // Change code above this line
-}
+//   // Change code above this line
+// }
 
-console.log(getAllPropValues("name"));// повертає ["Radar", "Scanner", "Droid", "Grip"]
-console.log(getAllPropValues("quantity"));// повертає [4, 3, 7, 9]
-// console.log(getAllPropValues("price"));// повертає [1300, 2700, 400, 1200]
-// console.log(getAllPropValues("category"));// повертає []
+// console.log(getAllPropValues("name"));// повертає ["Radar", "Scanner", "Droid", "Grip"]
+// console.log(getAllPropValues("quantity"));// повертає [4, 3, 7, 9]
+// // console.log(getAllPropValues("price"));// повертає [1300, 2700, 400, 1200]
+// // console.log(getAllPropValues("category"));// повертає []
+//===================================
+
+
+const book = {
+  title: "The Last Kingdom",
+  author: "Bernard Cornwell",
+  genres: ["historical prose", "adventure"],
+  public: true,
+  rating: 8.38,
+};
+
+// Деструктуризуємо
+const { title, author, public, rating, coverImage } = book;
+console.log(coverImage); // undefined
+
+const accessType = public ? "публічному" : "закритому";
+const message = `Книга ${title} автора ${author} з рейтингом ${rating} знаходиться в ${accessType} доступі.`;
