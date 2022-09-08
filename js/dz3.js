@@ -483,3 +483,160 @@ passwordInputName.
 
 // const accessType = public ? "публічному" : "закритому";
 // const message = `Книга ${title} автора ${author} з рейтингом ${rating} знаходиться в ${accessType} доступі.`;ПШЕ
+
+// ========================================================================
+// Ми отримали прогноз погоди на два дні, з мінімальними і максимальними температурами, а також необов'язковими іконками.
+// Заміни оголошення всіх змінних однією операцією деструктуризації властивостей об'єкта forecast.
+// Задай значення за замовчуванням для іконок, змінних todayIcon і
+// tomorrowIcon - рядок "https://www.flaticon.com/svg/static/icons/svg/2204/2204346.svg".
+
+// Оголошена змінна forecast
+// Значення змінної forecast - це об'єкт
+// Оголошена змінна highToday за допомогою деструктуризації
+// Значення змінної highToday - це число 32
+// Оголошена змінна lowToday за допомогою деструктуризації
+// Значення змінної lowToday - це число 28
+// Оголошена змінна todayIcon за допомогою деструктуризації
+// Значення змінної todayIcon - це рядок "https://www.flaticon.com/svg/static/icons/svg/861/861059.svg"
+// Оголошена змінна highTomorrow за допомогою деструктуризації
+// Значення змінної highTomorrow - це число 31
+// Оголошена змінна lowTomorrow за допомогою деструктуризації
+// Значення змінної lowTomorrow - це число 27
+// Оголошена змінна tomorrowIcon за допомогою деструктуризації
+// Значення змінної tomorrowIcon - це рядок "https://www.flaticon.com/svg/static/icons/svg/2204/2204346.svg"
+// Використовується синтаксис деструктуризації об'єкта highTemperatures
+
+// const forecast = {
+//   today: {
+//     low: 28,
+//     high: 32,
+//     icon: "https://www.flaticon.com/svg/static/icons/svg/861/861059.svg",
+//   },
+//   tomorrow: {
+//     low: 27,
+//     high: 31,
+//   },
+// };
+// // Change code below this line
+// const {
+//   today: { high:highToday , low:lowToday, icon:todayIcon = "https://www.flaticon.com/svg/static/icons/svg/2204/2204346.svg",},
+//   tomorrow: {high:highTomorrow, low:lowTomorrow, icon:tomorrowIcon = "https://www.flaticon.com/svg/static/icons/svg/2204/2204346.svg",},
+// } = forecast;
+
+
+// // const highToday = forecast.today.high;
+// // const lowToday = forecast.today.low;
+// // const todayIcon = forecast.today.icon;
+
+
+// // const highTomorrow = forecast.tomorrow.high;
+// // const lowTomorrow = forecast.tomorrow.low;
+// // const tomorrowIcon = forecast.tomorrow.icon;
+// console.log( highToday ,  lowToday,
+//             todayIcon, highTomorrow, lowTomorrow, tomorrowIcon)
+
+// =========================================================================
+// Заміни оголошення змінних todayLow, todayHigh, tomorrowLow і tomorrowHigh однією операцією деструктуризації властивостей об'єкта forecast.
+
+// Оголошена функція calculateMeanTemperature(forecast)
+// В тілі функції використовується деструктуризація об'єкта
+// В тілі функції оголошена змінна todayHigh за допомогою деструктуризації
+// В тілі функції оголошена змінна todayLow за допомогою деструктуризації
+// В тілі функції оголошена змінна tomorrowLow за допомогою деструктуризації
+// В тілі функції оголошена змінна tomorrowHigh за допомогою деструктуризації
+// Виклик calculateMeanTemperature({ today: {low: 28, high: 32}, tomorrow: {low: 25, high: 29} }) повертає 28.5
+// Виклик calculateMeanTemperature({ today: {low: 37, high: 40}, tomorrow: {low: 33, high: 38} }) повертає 37
+
+
+// // Change code below this line
+// function calculateMeanTemperature(forecast) {
+//   const{today:{low:todayLow, high:todayHigh},
+//        tomorrow:{low:tomorrowLow, high:tomorrowHigh}} = forecast;
+//   // const todayLow = forecast.today.low;
+//   // const todayHigh = forecast.today.high;
+//   // const tomorrowLow = forecast.tomorrow.low;
+//   // const tomorrowHigh = forecast.tomorrow.high;
+
+//   // Change code above this line
+//   return (todayLow + todayHigh + tomorrowLow + tomorrowHigh) / 4;
+// }
+// console.log(calculateMeanTemperature({ today: {low: 28, high: 32}, tomorrow: {low: 25, high: 29} }));// повертає 28.5
+// console.log(calculateMeanTemperature({ today: {low: 37, high: 40}, tomorrow: {low: 33, high: 38} }));// повертає 37
+
+// =======================================================
+// У змінній scores зберігається масив результатів тестування.
+//  Використовуючи розподіл і методи Math.max() і Math.min(), доповни код таким чином, щоб у змінній bestScore був найвищий бал,
+//   а у worstScore - найнижчий.
+
+// Оголошена змінна scores
+// Значення змінної scores - це масив [89, 64, 42, 17, 93, 51, 26]
+// Оголошена змінна bestScore
+// Значення змінної bestScore - це число 93
+// Оголошена змінна worstScore
+// Значення змінної worstScore - це число 17
+// Для передачі аргументів методу Math.max() використовується синтаксис ... на масиві scores
+// Для передачі аргументів методу Math.min() використовується синтаксис ... на масиві scores
+
+
+// const scores = [89, 64, 42, 17, 93, 51, 26];
+// // Change code below this line
+// const bestScore = Math.max(...scores);
+// const worstScore =Math.min(... scores) ;
+
+
+// console.log(scores);
+// console.log(bestScore);
+// console.log(worstScore);
+// ===============================================
+// const firstGroupScores = [64, 42, 93];
+// const secondGroupScores = [89, 14, 51, 26];
+// const thirdGroupScores = [29, 47, 18, 97, 81];
+// // Change code below this line
+// const allScores = [...firstGroupScores, ...secondGroupScores, ...thirdGroupScores,];
+// const bestScore = Math.max(... allScores);
+// const worstScore = Math.min(... allScores);
+
+// console.log( allScores);
+// console.log(bestScore);
+// console.log(worstScore);
+
+// ======================================================
+
+// В конструкторі можна створювати нові тести, для яких є налаштування за замовчуванням,
+//   які зберігаються у змінній defaultSettings.Під час створення тесту,
+//     усі або частину налаштувань можна перевизначити, вони зберігаються у змінній overrideSettings.
+
+// Для того щоб отримати фінальні налаштування тесту, необхідно взяти налаштування за замовчуванням і
+// поверх них застосувати перевизначені налаштування.
+// Доповни код таким чином, щоб у змінній finalSettings утворився об'єкт фінальних налаштувань тесту.
+
+// Оголошена змінна defaultSettings
+// Значення змінної defaultSettings - це об'єкт
+// Оголошена змінна overrideSettings
+// Значення змінної overrideSettings - це об'єкт
+// Оголошена змінна finalSettings
+// Значення змінної finalSettings - це об'єкт
+// Значення властивості finalSettings.theme дорівнює "light"
+// Значення властивості finalSettings.public дорівнює "false"
+// Значення властивості finalSettings.withPassword дорівнює "true"
+// Значення властивості finalSettings.minNumberOfQuestions дорівнює 10
+// Значення властивості finalSettings.timePerQuestion дорівнює 30
+// Для присвоєння значення змінній finalSettings використовується синтаксис ...
+// // const defaultSettings = {
+//   theme: "light",
+//   public: true,
+//   withPassword: false,
+//   minNumberOfQuestions: 10,
+//   timePerQuestion: 60,
+// };
+// const overrideSettings = {
+//   public: false,
+//   withPassword: true,
+//   timePerQuestion: 30,
+// };
+// // Change code below this line
+// const finalSettings = { ...defaultSettings, ...overrideSettings, };
+
+// console.log(finalSettings);
+// ==========================================================
+
