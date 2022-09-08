@@ -640,3 +640,28 @@ passwordInputName.
 // console.log(finalSettings);
 // ==========================================================
 
+function makeTask(data) {
+  
+  const completed = false;
+  const category = "General";
+  const priority = "Normal";
+  // Change code below this line
+  const{ ... text} = data;
+  // Change code above this line
+}
+
+
+
+
+
+
+// Оголошена функція makeTask(data)
+// console.log(makeTask({})); //повертає { category: "General", priority: "Normal", completed: false }
+
+console.log(makeTask({ category: "Homemade", priority: "Low", text: "Take out the trash" }));// повертає { category: "Homemade", priority: "Low", text: "Take out the trash", completed: false }
+
+console.log(makeTask({ category: "Finance", text: "Take interest" }));// повертає { category: "Finance", priority: "Normal", text: "Take interest", completed: false }
+
+console.log(makeTask({ priority: "Low", text: "Choose shampoo" }));// повертає { category: "General", priority: "Low", text: "Choose shampoo", completed: false }
+
+console.log(makeTask({ text: "Buy bread" }));// повертає { category: "General", priority: "Normal", text: "Buy bread", completed: false }
