@@ -920,7 +920,6 @@ const atTheOldToad = {
         return `Error! Potion ${newPotion.name} is already in your inventory!`;
       }
     }
-
     this.potions.push(newPotion);
   },
   removePotion(potionName) {
@@ -934,8 +933,24 @@ const atTheOldToad = {
 
     return `Potion ${potionName} is not in inventory!`;
   },
+  updatePotionName(oldName, newName) {
+    const potionIndex = this.potions.indexOf(oldName);
+
+    for (let potion of this.potions) {
+      if (potion.name === oldName) {
+        potion.name = newName;
+      }
+    }
+
+    if (potionIndex === -1) {
+      return `Potion ${oldName} is not in inventory!`;
+    }
+
+    this.potions.splice(potionIndex, 1, newName);
+  },
   // Change code above this line
 };
+
 console.log(atTheOldToad.getPotions()); //для вихідного об'єкта повертає [ { name: "Speed potion", price: 460 }, { name: "Dragon breath", price: 780 },{ name: "Stone skin", price: 520 } ]
 
 console.log(atTheOldToad.addPotion({ name: "Invisibility", price: 620 }));
@@ -949,11 +964,13 @@ console.log(atTheOldToad.addPotion({ name: "Power potion", price: 270 }));
 // atTheOldToad.addPotion({ name: "Dragon breath", price: 700 });
 // atTheOldToad.addPotion({ name: "Stone skin", price: 240 });
 // // Значення властивості atTheOldToad.removePotion - це метод об'єкта
-atTheOldToad.removePotion("Dragon breath");
+console.log(atTheOldToad.removePotion("Dragon breath"));
 // // у властивості potions буде масив [{ name: "Speed potion", price: 460 }, { name: "Stone skin", price: 520 }]
-atTheOldToad.removePotion("Speed potion"); // у властивості potions буде масив [{ name: "Dragon breath", price: 780 }, { name: "Stone skin", price: 520 }]
+console.log(atTheOldToad.removePotion("Speed potion")); // у властивості potions буде масив [{ name: "Dragon breath", price: 780 }, { name: "Stone skin", price: 520 }]
 //   // Значення властивості atTheOldToad.updatePotionName - це метод об'єкта
-//   atTheOldToad.updatePotionName("Dragon breath", "Polymorth");
+console.log(atTheOldToad.updatePotionName("Dragon breath", "Polymorth"));
 // //  у властивості potions буде масив[{ name: "Speed potion", price: 460 }, { name: "Polymorth", price: 780 }, { name: "Stone skin", price: 520 }]
-// atTheOldToad.updatePotionName("Stone skin", "Invulnerability potion");
+console.log(
+  atTheOldToad.updatePotionName("Stone skin", "Invulnerability potion")
+);
 // //  у властивості potions буде масив[{ name: "Speed potion", price: 460 }, { name: "Dragon breath", price: 780 }, { name: "Invulnerability potion", price: 520 } ]
