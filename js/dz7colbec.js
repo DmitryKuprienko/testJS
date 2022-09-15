@@ -247,30 +247,73 @@
 // console.log(filterArray([12, 24, 8, 41, 76], 38)); //повертає [41, 76]
 // console.log(filterArray([12, 24, 8, 41, 76], 20)); // повертає [24, 41, 76]
 // ==============================================================================
-const changeEven = (numbers, value) => {
-  // Change code below this line
-  const newArrey = [];
+// const changeEven = (numbers, value) => {
+//   // Change code below this line
+//   const newArrey = [];
 
-  numbers.forEach((element) => {
-    if (element % 2 === 0) {
-      console.log(element);
-      newArrey.push(element + value);
-    } else {
-      newArrey.push(element);
-    }
-  });
+//   numbers.forEach((element) => {
+//     if (element % 2 === 0) {
+//       console.log(element);
+//       newArrey.push(element + value);
+//     } else {
+//       newArrey.push(element);
+//     }
+//   });
 
-  // for (let i = 0; i < numbers.length; i += 1) {
-  //   if (numbers[i] % 2 === 0) {
-  //     numbers[i] = numbers[i] + value;
-  //   }
-  // }
+//   // for (let i = 0; i < numbers.length; i += 1) {
+//   //   if (numbers[i] % 2 === 0) {
+//   //     numbers[i] = numbers[i] + value;
+//   //   }
+//   // }
 
-  return newArrey;
-  // Change code above this line
-};
+//   return newArrey;
+//   // Change code above this line
+// };
 
-console.log(changeEven([1, 2, 3, 4, 5], 10)); //повертає новий масив [1, 12, 3, 14, 5]
-console.log(changeEven([2, 8, 3, 7, 4, 6], 10)); //повертає новий масив [12, 18, 3, 7, 14, 16]
-console.log(changeEven([17, 24, 68, 31, 42], 100)); //повертає новий масив [17, 124, 168, 31, 142]
-console.log(changeEven([44, 13, 81, 92, 36, 54], 100)); //
+// console.log(changeEven([1, 2, 3, 4, 5], 10)); //повертає новий масив [1, 12, 3, 14, 5]
+// console.log(changeEven([2, 8, 3, 7, 4, 6], 10)); //повертає новий масив [12, 18, 3, 7, 14, 16]
+// console.log(changeEven([17, 24, 68, 31, 42], 100)); //повертає новий масив [17, 124, 168, 31, 142]
+// console.log(changeEven([44, 13, 81, 92, 36, 54], 100)); //
+// =============================================================================
+// const students = [
+//   { name: "Манго", courses: ["математика", "фізика"] },
+//   { name: "Полі", courses: ["інформатика", "математика"] },
+//   { name: "Ківі", courses: ["фізика", "біологія"] },
+// ];
+
+// console.log(students.map(student => student.courses));
+// // [['математика', 'фізика'], ['інформатика', 'математика'], ['фізика', 'біологія']]
+
+// console.log(students.flatMap(student => student.courses));
+// // ['математика', 'фізика', 'інформатика', 'математика', 'фізика', 'біологія'];
+const students = [
+  { name: "Манго", courses: ["математика", "фізика"] },
+  { name: "Полі", courses: ["інформатика", "математика"] },
+  { name: "Ківі", courses: ["фізика", "біологія"] },
+];
+
+const allCourses = students.flatMap((student) => student.courses);
+// ['математика', 'фізика', 'інформатика', 'математика', 'фізика', 'біологія'];
+
+// У змінній allCourses зберігається масив усіх відвідуваних предметів, які можуть повторюватися. Завдання полягає у тому, щоб створити новий масив, в якому будуть тільки унікальні предмети, тобто без повторень.
+
+// const uniqueCourses = allCourses.filter((course, index, array) => {
+
+//   array.indexOf(course) === index;
+
+//   console.log(course);
+//   console.log(index);
+//   // console.log(array);
+// });
+
+const colorPickerOptions = [
+  { label: "red", color: "#F44336" },
+  { label: "green", color: "#4CAF50" },
+  { label: "blue", color: "#2196F3" },
+  { label: "pink", color: "#E91E63" },
+  { label: "indigo", color: "#3F51B5" },
+];
+
+console.log(colorPickerOptions.find((option) => option.label === "blue")); // { label: 'blue', color: '#2196F3' }
+console.log(colorPickerOptions.find((option) => option.label === "pink")); // { label: 'pink', color: '#E91E63' }
+console.log(colorPickerOptions.find((option) => option.label === "white")); // undefined
