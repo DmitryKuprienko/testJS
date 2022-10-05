@@ -1,34 +1,34 @@
-// const listWithId = document.querySelector("#menu");
-// listWithId.style.textTransform = "uppercase";
-// listWithId.style.fontSize = "24px";
-// console.log(listWithId);
+const listWithId = document.querySelector("#menu");
+listWithId.style.textTransform = "uppercase";
+listWithId.style.fontSize = "24px";
+console.log(listWithId);
 
-// const listWithClass = document.querySelector(".menu");
-// console.log(listWithClass);
+const listWithClass = document.querySelector(".menu");
+console.log(listWithClass);
 
-// const menuItemsByTagName = document.querySelectorAll("li");
-// console.log(menuItemsByTagName);
+const menuItemsByTagName = document.querySelectorAll("li");
+console.log(menuItemsByTagName);
 
-// const menuItemsByClass = document.querySelectorAll(".menu-item");
-// console.log(menuItemsByClass);
+const menuItemsByClass = document.querySelectorAll(".menu-item");
+console.log(menuItemsByClass);
 
-// const firstMenuItem = document.querySelector(".menu-item");
-// firstMenuItem.style.color = "tomato";
-// console.log(firstMenuItem);
+const firstMenuItem = document.querySelector(".menu-item");
+firstMenuItem.style.color = "tomato";
+console.log(firstMenuItem);
 // ============================================================
-// console.log(document);
+console.log(document);
 
-// const body = document.body;
-// console.log(body);
+const body = document.body;
+console.log(body);
 
-// const list = body.firstElementChild;
-// console.log(list);
+const list = body.firstElementChild;
+console.log(list);
 
-// const firstListItem = list.firstElementChild;
-// console.log(firstListItem);
+const firstListItem = list.firstElementChild;
+console.log(firstListItem);
 
-// const listItems = list.children;
-// console.log(listItems);
+const listItems = list.children;
+console.log(listItems);
 // =======================================================
 //===================================================
 // const message = document.querySelector("#message");
@@ -95,14 +95,14 @@
 // const closeBtn = document.querySelector('button[data-action="close"]');
 // console.log(closeBtn.dataset.action); // "close"
 
-const saveBtn = document.querySelector('.editor button[data-action="save"]');
-const closeBtn = document.querySelector('.editor button[data-action="close"]');
+// const saveBtn = document.querySelector('.editor button[data-action="save"]');
+// const closeBtn = document.querySelector('.editor button[data-action="close"]');
 
-console.log(saveBtn.dataset.action); //save
-console.log(closeBtn.dataset.action); //close
+// console.log(saveBtn.dataset.action); //save
+// console.log(closeBtn.dataset.action); //close
 
-const dishes = document.querySelectorAll(".dishes > li");
-console.log(dishes);
-dishes.forEach((dish) => {
-  console.log(dish.dataset.id);
-});
+// const dishes = document.querySelectorAll(".dishes > li");
+// console.log(dishes);
+// dishes.forEach((dish) => {
+//   console.log(dish.dataset.id);
+// });
