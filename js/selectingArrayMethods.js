@@ -8,7 +8,7 @@ const forEach= numbers.forEach((num,ind,arr) => {return num});
 
 const map = numbers.map(num=>num % 2);
 
-// console.log("map", map)
+console.log("map", map)
 // console.log("origi", numbers)
 
 const users =[
@@ -123,7 +123,10 @@ const users =[
             );
     }
 
-    console.table(user1(users, 'cuprienko.d@mail.com'));
-    console.table(user1(users, "moorehensley@indexia.com"));
-    console.table(user1(users, 'cuprienko.d@mail.com'));
-    console.table(user1(users, "blackburndotson@furnigeer.com"));
+    // console.table(user1(users, 'cuprienko.d@mail.com'));
+    // console.table(user1(users, "moorehensley@indexia.com"));
+    // console.table(user1(users, 'cuprienko.d@mail.com'));
+    // console.table(user1(users, "blackburndotson@furnigeer.com"));
+
+    const sumBalance = users.map(({balance})=> balance).reduce((total,bal)=>total +bal,0);
+    console.log(sumBalance)
