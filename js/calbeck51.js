@@ -79,25 +79,24 @@
 // basket.decreaseQuntity('apricot');
 // console.table('зменшення в масиві ', basket.getItems());
 
-// const fna1 = function (mesedge, calbeck) {
-//   calbeck(mesedge);
-// };
+const fna1 = function (mesedge, calbeck) {
+  calbeck(mesedge);
+};
 
-// fna1('приві456', function (mesenger) {
-//   console.log(mesenger);
-// });
+fna1('приві456', function (mesenger) {
+  console.log(mesenger);
+});
 
-// const doMatch = function (a, b, calbeck) {
-//   return console.log(calbeck(a, b));
-// };
+const doMatch = (a, b, calbeck)=> calbeck(a, b)
 
-// const sum = (x, y) => x + y;
-// const difference = (x, y) => x - y;
-// const dobutok = (x, у) => x * у;
+const sum = (x, y) => x + y;
+const difference = (x, y) => x - y;
+const dobutok = (x, у) => x * у;
 
-// // doMatch(5, 6, sum);
-// // doMatch(122, 22, difference);
-// // doMatch(6, 8, dobutok);
+console.log(doMatch(5, 6, sum))
+console.log(doMatch(122, 22, difference))
+console.log(doMatch(6, 8, dobutok))
+;
 
 // const clickBtn = document.querySelector('.js-btn');
 
@@ -115,29 +114,91 @@
 //   console.log('пока ');
 // }
 
-function arrey1(a, calbeck) {
-  const refArey = [];
-  for (const a1 of a) {
-    if (calbeck(a1)) {
-      console.log(a1);
-      refArey.push(a1);
+// function arrey1(a, calbeck) {
+//   const refArey = [];
+//   for (const a1 of a) {
+//     if (calbeck(a1)) {
+//       console.log(a1);
+//       refArey.push(a1);
+//     }
+//   }
+//   return refArey;
+// }
+
+// const r1 = arrey1([1, 2, 3, 4, 5, 6, 7, 8], x => x >= 3);
+// const r2 = arrey1([1, 2, 3, 4, 5, 6, 7], x => x <= 4);
+
+// console.log(r1);
+// console.log(r2);
+
+// const fruits = [
+//   { name: 'appel', quantity: 120, status: true },
+//   { name: 'cherry', quantity: 200, status: false },
+//   { name: 'kivi', quantity: 90, status: true },
+//   { name: 'tomato', quantity: 156, status: false },
+// ];
+
+// const fruit = arrey1(fruits, fruit => fruit.quantity >= 130);
+// console.log(fruit);
+// ======================================
+//  const fnA =function (param) {
+
+// const innerVelue = "it is function innerVelue";
+
+//     const innerFunction = function(){
+//         console.log(param)
+//         console.log(innerVelue)
+//         console.log(" is innerFunction");
+//     }
+
+//     return innerFunction;
+//  }
+
+//  const fnB= fnA(555)
+//  fnB()
+//  console.log(fnB)
+// =======================================
+
+//  const makeAuto = function(marka){
+//     const numberAuto= 'AA2434AB'
+
+//     const modelAuto= function(model){
+//         console.log(numberAuto)
+//         console.log(`ЦЕ марка авто ${marka} - це модель авто ${model}`)
+//     }
+//     return modelAuto
+//  }
+// const marka1 = makeAuto("Audi");
+// console.dir(marka1)
+// marka1("a6");
+// marka1('a5')
+// const marka2 = makeAuto("ford");
+// marka2("fushen")
+// marka2("fiesta")
+// ================================
+
+const zp= function( name,rate=0){
+    let salary = rate;
+
+    return {
+        raise(emount){
+            salary += emount;
+        },
+        decrease(emount){
+            salary-=emount
+        },
+        current(){
+            return `цуй працівник ${name}- отримає ${salary}`
+        } 
     }
-  }
-  return refArey;
 }
 
-const r1 = arrey1([1, 2, 3, 4, 5, 6, 7, 8], x => x >= 3);
-const r2 = arrey1([1, 2, 3, 4, 5, 6, 7], x => x <= 4);
+const salarySptrud= zp('tomato', 
+10000
+)
 
-console.log(r1);
-console.log(r2);
 
-const fruits = [
-  { name: 'appel', quantity: 120, status: true },
-  { name: 'cherry', quantity: 200, status: false },
-  { name: 'kivi', quantity: 90, status: true },
-  { name: 'tomato', quantity: 156, status: false },
-];
+console.log(salarySptrud.current())
 
-const fruit = arrey1(fruits, fruit => fruit.quantity >= 130);
-console.log(fruit);
+// console.log(zp.salary)
+
