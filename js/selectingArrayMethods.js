@@ -130,3 +130,10 @@ const users =[
 
     const sumBalance = users.map(({balance})=> balance).reduce((total,bal)=>total +bal,0);
     console.log(sumBalance)
+
+    const allFriends = users.reduce((friend, user)=>{return [...friend,...user.friends]
+      // friend.push(...user.friends);
+      // return friend
+    },[])
+
+console.log(allFriends)
