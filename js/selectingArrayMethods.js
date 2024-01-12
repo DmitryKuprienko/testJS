@@ -33,11 +33,13 @@ const users = [
     isActive: true,
     balance: 3821,
     skills: [
+      'ipsum',
       'tempor',
       'mollit',
       'commodo',
       'veniam',
       'laborum',
+      'lorem',
     ],
     gender: 'female',
     age: 34,
@@ -78,7 +80,7 @@ const users = [
     name: 'Carey Barr',
     email: 'careybarr@nurali.com',
     eyeColor: 'blue',
-    friends: ['Jordan Sampson', 'Eddie Strong'],
+    friends: ['Jordan Sampson', 'Eddie Strong','velit','Jacklyn Lucas'],
     isActive: true,
     balance: 3951,
     skills: ['ex', 'culpa', 'nostrud'],
@@ -89,7 +91,7 @@ const users = [
     name: 'Blackburn Dotson',
     email: 'blackburndotson@furnigeer.com',
     eyeColor: 'brown',
-    friends: ['Jacklyn Lucas', 'Linda Chapman'],
+    friends: ['Jacklyn Lucas','velit', 'Linda Chapman'],
     isActive: false,
     balance: 1498,
     skills: ['non', 'amet', 'ipsum'],
@@ -100,7 +102,7 @@ const users = [
     name: 'Sheree Anthony',
     email: 'shereeanthony@kog.com',
     eyeColor: 'brown',
-    friends: ['Goldie Gentry', 'Briana Decker'],
+    friends: ['Goldie Gentry', 'Briana Decker','velit','Jacklyn Lucas'],
     isActive: true,
     balance: 2764,
     skills: ['lorem', 'veniam', 'culpa'],
@@ -166,4 +168,40 @@ const allFriends = users.reduce(
   []
 );
 
-console.log(allFriends);
+console.log("allFriends", allFriends);
+
+
+const allSkills = allFriends.reduce((acc, tegs) =>
+
+{
+// варіант 1
+//   console.log("acc", acc);
+//   if (acc[tegs]) {
+    
+//     acc[tegs] += 1;
+//     return acc;
+//   }
+//   acc[tegs] = 1;
+//   return acc;
+  
+  //   }
+// варіант 2 
+  // {
+
+  // console.log("acc", acc);
+  // if (acc[tegs]) {
+    
+  //   // acc[tegs] += 1;
+  //   // return acc;
+
+  //   return {...acc, [tegs]:acc[tegs]+=1 }
+  // }
+  // // acc[tegs] = 1;
+  // // return acc;
+  
+  // return {...acc, [tegs]:acc[tegs] = 1 }
+  // }
+  return { ...acc, [tegs]: acc[tegs] ? acc[tegs] + 1 : 1 }
+}, {});
+
+console.table("allSkills", allSkills)
