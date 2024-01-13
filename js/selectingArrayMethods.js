@@ -205,3 +205,20 @@ const allSkills = allFriends.reduce((acc, tegs) =>
 }, {});
 
 console.table("allSkills", allSkills)
+
+//=================сорт=======
+
+const numbers2 = [1, 2, 4, 5, 8, 3, 7];
+const sort = numbers2.sort((a, b) => {
+  // console.log("a=>", a)
+  //   console.log("b=>", b)
+   return a-b
+});
+
+console.log(sort)
+
+const sortArreyObj = [...users].sort(
+ ( a,b )=>{return a.age- b.age} 
+)
+
+console.table(sortArreyObj)
