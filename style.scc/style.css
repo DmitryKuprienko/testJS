@@ -90,9 +90,13 @@ body {
 }
 
 .color-palette {
-  display: grid;
+  /* display: grid;
   grid-template-columns: repeat(auto-fit, minmax(40px, 1fr));
-  gap: 4px;
+
+  gap: 4px; */
+  justify-content: center;
+  display: flex;
+  text-align: center;
 }
 
 .color-palette .item {
@@ -104,8 +108,13 @@ body {
   height: 40px;
   cursor: pointer;
   transition: transform 250ms ease-in-out;
+  display: flex;
+  text-align: center;
 }
 
 .color-palette .item:hover {
   transform: scale(1.1);
+}
+
+.counter {
 }
