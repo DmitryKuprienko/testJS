@@ -19,9 +19,25 @@ const car1 = new Car({
   price: 25000,
 });
 
-console.log('🚀 ~ car1:', car1);
-console.log('🚀 ~ Car ~ getmodel ~ get:', car1.model);
+class Carautom extends Car {
+  constructor({ modelAutom = 'korbka', brand, model, price } = {}) {
+    super(brand, model, price);
 
-car1.model = 'Focus';
+    this.modelAutom = modelAutom;
+  }
+}
 
-console.log('🚀 ~ car1:', car1);
+const car2 = new Carautom({
+  modelAutom: 'auto',
+  brand: 'Ford',
+  model: 'Fiesta',
+  price: 25000,
+});
+console.log('🚀 ~ Carautom:', car2);
+
+// console.log('🚀 ~ car1:', car1);
+// console.log('🚀 ~ Car ~ getmodel ~ get:', car1.model);
+
+// car1.model = 'Focus';
+
+// console.log('🚀 ~ car1:', car1);
