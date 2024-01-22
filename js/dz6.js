@@ -1,34 +1,34 @@
-const listWithId = document.querySelector("#menu");
-listWithId.style.textTransform = "uppercase";
-listWithId.style.fontSize = "24px";
-console.log(listWithId);
+const listWithId = document.querySelector('#menu');
 
-const listWithClass = document.querySelector(".menu");
-console.log(listWithClass);
+listWithId.style.textTransform = 'uppercase';
+listWithId.style.fontSize = '24px';
+console.log('🚀 ~ listWithId:', listWithId);
 
-const menuItemsByTagName = document.querySelectorAll("li");
-console.log(menuItemsByTagName);
+const listWithClass = document.querySelector('.menu');
+console.log('🚀 ~ listWithClass:', listWithClass);
 
-const menuItemsByClass = document.querySelectorAll(".menu-item");
-console.log(menuItemsByClass);
+const menuItemsByTagName = document.querySelectorAll('li');
+console.log('🚀 ~ menuItemsByTagName:', menuItemsByTagName);
 
-const firstMenuItem = document.querySelector(".menu-item");
-firstMenuItem.style.color = "tomato";
-console.log(firstMenuItem);
+const menuItemsByClass = document.querySelectorAll('.menu-item');
+console.log('🚀 ~ menuItemsByClass:', menuItemsByClass);
+
+const firstMenuItem = document.querySelector('.menu-item');
+
+firstMenuItem.style.color = 'tomato';
+console.log('🚀 ~ firstMenuItem:', firstMenuItem);
 // ============================================================
-console.log(document);
+
+console.log('🚀 ~ document:', document);
 
 const body = document.body;
-console.log(body);
 
 const list = body.firstElementChild;
-console.log(list);
 
 const firstListItem = list.firstElementChild;
-console.log(firstListItem);
 
 const listItems = list.children;
-console.log(listItems);
+
 // =======================================================
 //===================================================
 // const message = document.querySelector("#message");
