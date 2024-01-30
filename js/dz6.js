@@ -1,31 +1,48 @@
 const listWithId = document.querySelector('#menu');
 
-listWithId.style.textTransform = 'uppercase';
-listWithId.style.fontSize = '24px';
+listWithId.classList.add('menus-one');
 console.log('🚀 ~ listWithId:', listWithId);
 
+// listWithId.style.fontSize = '32px';
+// console.log('🚀 ~ listWithId:', listWithId.childNodes);
+// console.log('🚀 ~ listWithId:', listWithId.children[2]);
+//функція перебиранння списку UL повертає масив значень li
+// function listWithIdname(arrys) {
+//   const arrysValue = [];
+//   for (const arr of arrys) {
+//     arrysValue.push(arr.innerHTML);
+
+//     console.log('🚀 ~ arr:', arr.innerHTML);
+//   }
+//   return arrysValue;
+// }
+
+// console.log(listWithIdname(listWithId.children));
+
 const listWithClass = document.querySelector('.menu');
-console.log('🚀 ~ listWithClass:', listWithClass);
+// console.log('🚀 ~ listWithClass:', listWithClass);
 
 const menuItemsByTagName = document.querySelectorAll('li');
-console.log('🚀 ~ menuItemsByTagName:', menuItemsByTagName);
+// console.log('🚀 ~ menuItemsByTagName:', menuItemsByTagName);
 
 const menuItemsByClass = document.querySelectorAll('.menu-item');
-console.log('🚀 ~ menuItemsByClass:', menuItemsByClass);
+// console.log('🚀 ~ menuItemsByClass:', menuItemsByClass);
 
 const firstMenuItem = document.querySelector('.menu-item');
 
 firstMenuItem.style.color = 'tomato';
-console.log('🚀 ~ firstMenuItem:', firstMenuItem);
+// console.log('🚀 ~ firstMenuItem:', firstMenuItem);
 // ============================================================
 
-console.log('🚀 ~ document:', document);
+// console.log('🚀 ~ document:', document);
 
 const body = document.body;
-
-const list = body.firstElementChild;
+// console.dir(document);
+const list = body;
+// console.log('🚀 ~ list:', list);
 
 const firstListItem = list.firstElementChild;
+// console.log('🚀 ~ firstListItem:', firstListItem);
 
 const listItems = list.children;
 
